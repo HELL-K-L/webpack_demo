@@ -1,4 +1,4 @@
 # webpack_demo
 
-yarn 
-yarn build:html
+* yarn 
+* yarn build:html
