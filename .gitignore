@@ -1,0 +1,14 @@
+*.swp
+node_modules/
+.DS_Store
+dist-*/
+.idea/
+.ackrc
+.jscsrc
+*.swp
+*.swo
+.zentaorc.js
+npm-debug.log
+.vscode/
+dist
+typings
