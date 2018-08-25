@@ -3,14 +3,14 @@ var htmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: {
-    insert: "./htmlWebpackPlugin/src/insert.js", //直接插入html的代码
-    main: "./htmlWebpackPlugin/src/index.js",
-    a: "./htmlWebpackPlugin/src/a.js",
-    b: "./htmlWebpackPlugin/src/b.js",
-    c: "./htmlWebpackPlugin/src/c.js"
+    insert: "./src/insert.js", //直接插入html的代码
+    main: "./src/index.js",
+    a: "./src/a.js",
+    b: "./src/b.js",
+    c: "./src/c.js"
   },
   output: {
-    path: path.join(__dirname, "../htmlWebpackPlugin/dist"),
+    path: path.join(__dirname, "../dist"),
     filename: "js/[name]-[chunkhash].js",
     publicPath: "./"
   },
@@ -30,7 +30,7 @@ module.exports = {
     // })
     new htmlWebpackPlugin({
       filename: "a.html",
-      template: "./htmlWebpackPlugin/index.html",
+      template: "index.html",
       inject: false,
       excludeChunks: ["b", "c"],
       title: "hello world a"
@@ -38,14 +38,14 @@ module.exports = {
     new htmlWebpackPlugin({
       filename: "b.html",
       inject: false,
-      template: "./htmlWebpackPlugin/index.html",
+      template: "index.html",
       excludeChunks: ["a", "c"],
       title: "hello world b"
     }),
     new htmlWebpackPlugin({
       filename: "c.html",
       inject: false,
-      template: "./htmlWebpackPlugin/index.html",
+      template: "index.html",
       excludeChunks: ["a", "b"],
       title: "hello world c"
     })

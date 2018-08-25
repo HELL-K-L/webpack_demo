@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:html": "webpack --config ./htmlWebpackPlugin/webpack.config.js --progress --display-modules --colors --desplay-reaon"
+    "build": "webpack --config ./webpack.config.js --progress --display-modules --colors --desplay-reaon"
   },
   "repository": {
     "type": "git",
